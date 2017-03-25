@@ -1,7 +1,73 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name=viewport content="width=device-width, initial-scale=1">
+<title>☆ (｡◕‿‿◕｡) ☆</title>
+<!--<link rel="icon" href="/img/favicon.png">-->
+<style>
+html, body, .content {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  background-color: #000000;
+}
+
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.flex-item {
+  flex: 1 1 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-full-row { flex: 1 1 100%; }
+
+@media (orientation:portrait) {
+  .flex-container { flex-direction: column; }
+  .flex-item { flex: 1; }
+}
+
+.name { font-weight: bold; font-size: 2em; }
+.content { font: 1.5em Helvetica; color: #fff; }
+.content a { text-decoration: none; }
+
+.bg {
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.bg:hover { color: #fff; }
+
+.faded {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.bg-image {
+  background-image: url("img/bg_small.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+@media only screen and (min-device-width: 768px) {
+  .bg-image { background-image: url("img/bg_large.jpg"); }
+}
+</style>
+</head>
+
 <body>
-<h1>hello</h1>
-<p>hey dude</p>
+<div class="content bg-image flex-container">
+  <div class="flex-full-row flex-item faded">
+    <div class="name">deluged</div>
+  </div>
+</div>
+
 </body>
 </html>
+
